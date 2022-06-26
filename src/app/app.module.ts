@@ -9,14 +9,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule,
-     IonicModule.forRoot(), 
-     AppRoutingModule,
-     HttpClientModule,
-     CoreModule
+    IonicModule.forRoot(),
+    
+    AppRoutingModule,
+    HttpClientModule,
+    CoreModule
     ],
   providers: [
     { provide:

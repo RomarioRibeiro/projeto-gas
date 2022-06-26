@@ -7,5 +7,6 @@ export class Pessoa{
     numero: number;
     telefone: number;
     gas: number;
+    valor: number;
 
 }
