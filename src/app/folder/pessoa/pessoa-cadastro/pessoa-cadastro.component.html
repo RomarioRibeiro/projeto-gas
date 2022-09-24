@@ -11,46 +11,57 @@
   <form (ngSubmit)="onSubmit()" #form="ngForm">
     <ion-item>
       <ion-label position="stacked">Nome</ion-label>
-      <ion-input [(ngModel)]="pessoa.nome" name="nome" #nome="ngModel"  required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Data Fiado </ion-label>
-      <ion-input [(ngModel)]="pessoa.data" name="data" #nome="ngModel" required mask="00/00"></ion-input>
-  
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Numero da Casa</ion-label>
-      <ion-input [(ngModel)]="pessoa.numero" name="numero" #nome="ngModel" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Rua</ion-label>
-      <ion-input [(ngModel)]="pessoa.rua" name="rua" #nome="ngModel" required></ion-input>
+      <ion-input [(ngModel)]="pessoa.nome" name="nome" #nome="ngModel" required></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">Telefone</ion-label>
-      <ion-input [(ngModel)]="pessoa.telefone" name="telefone" #telefone="ngModel" required></ion-input>
+      <ion-input placeholder="(43)9999-9999" minlength="11" maxlength="11" [(ngModel)]="pessoa.telefone" name="telefone"
+        #nome="ngModel"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Rua</ion-label>
+      <ion-input [(ngModel)]="pessoa.logradouro" name="logradouro" #gas="ngModel" required></ion-input>
+
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Numero da Casa</ion-label>
+      <ion-input [(ngModel)]="pessoa.numero" name="numero" #dataPaga="ngModel" required></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Bairro</ion-label>
+      <ion-input [(ngModel)]="pessoa.bairro" name="bairro" #valors="ngModel" required></ion-input>
+
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Quantidade do Gás</ion-label>
-      <ion-input [(ngModel)]="pessoa.gas" name="gas" #gas="ngModel" required></ion-input>
-      
-    </ion-item>
+      <ion-input [(ngModel)]="pessoa.quantidade" name="quantidade" #valors="ngModel" required></ion-input>
 
-
-    <ion-item>
-      <ion-label position="stacked">Data Pagamento</ion-label>
-      <ion-input [(ngModel)]="pessoa.dataPaga" name="dataPaga" #dataPaga="ngModel" required></ion-input>
-      
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">Valor Pagar</ion-label>
-      <ion-input [(ngModel)]="pessoa.valor" name="valor" #valors="ngModel" required></ion-input>
-      
+      <ion-input [(ngModel)]="pessoa.preco" name="preco" #valors="ngModel" required></ion-input>
+
     </ion-item>
 
+    <ion-item>
+      <ion-label position="stacked">Data do Fiado</ion-label>
+      <ion-input [(ngModel)]="pessoa.dataCadastro" name="dataCadastro" #valors="ngModel" required></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Data do Pagamento</ion-label>
+
+      <ion-input  [(ngModel)]="pessoa.dataPagamento"  name="dataPagamento" #valors="ngModel" required></ion-input>
+    </ion-item>
 
 
 
@@ -60,3 +71,4 @@
     </ion-button>
   </form>
 </ion-content>
+

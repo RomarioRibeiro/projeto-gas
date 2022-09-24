@@ -1,3 +1,4 @@
+import { Endereco } from './../../../core/models/endereco';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
@@ -15,9 +16,10 @@ import { Pessoa } from 'src/app/core/models/pessoa.model';
   styleUrls: ['./pessoa-cadastro.component.css'],
 })
 export class PessoaCadastroComponent implements OnInit {
- 
+
   pessoa = new Pessoa();
   idpesso: string;
+  endereco = new Endereco();
   constructor(
     private pessoaService: PessoaService,
     private alert: AlertService,
@@ -62,10 +64,8 @@ export class PessoaCadastroComponent implements OnInit {
       }
     } catch (error) {
       this.toast.showError('Erro ao cadastrar Pessoa');
-
     }
   }
-
   atualizarTituloEdicao() {
     this.title.setTitle(`Edição de Pessoa: ${this.pessoa.nome}`);
   }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy, Routes } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -11,12 +11,15 @@ import { CoreModule } from './core/core.module';
 
 
 
+
+
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule,
     IonicModule.forRoot(),
-    
     AppRoutingModule,
     HttpClientModule,
     CoreModule
@@ -25,7 +28,7 @@ import { CoreModule } from './core/core.module';
     { provide:
      RouteReuseStrategy,
      useClass:
-    IonicRouteStrategy 
+    IonicRouteStrategy
 
     }
 

@@ -8,6 +8,9 @@ import { IonicModule } from '@ionic/angular';
 import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 
 
+
+;
+
 @NgModule({
   declarations: [
     PessoaListComponent,
@@ -17,7 +20,10 @@ import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.compo
     CommonModule,
     PessoaRoutingModule,
     FormsModule,
-    IonicModule
+    IonicModule,
+    IonicModule.forRoot({}),
+
+
   ]
 })
 export class PessoaModule { }

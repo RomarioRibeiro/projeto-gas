@@ -12,16 +12,16 @@ export class PessoaService {
   apiURL: string;
 
   constructor(private http: HttpClient) {
-    this.apiURL = `${environment.apiUrl}/pessoas`
+    this.apiURL = `${environment.apiUrl}`;
    }
 
    getAll(){
     return this.http.get<any>(`${this.apiURL}`)
     .toPromise()
-    
+
     .then(response => response);
     }
-    
+
     getById(id: string) {
       return this.http.get<any>(`${this.apiURL}/${id}`)
         .toPromise();
